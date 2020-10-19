@@ -6,6 +6,7 @@ using UnityEditor;
 
 using BindType = ToLuaMenu.BindType;
 using System.Reflection;
+using UnityEngine.SceneManagement;
 
 public static class CustomSettings
 {
@@ -29,6 +30,7 @@ public static class CustomSettings
         typeof(UnityEngine.QualitySettings),
         typeof(UnityEngine.GL),
         typeof(UnityEngine.Graphics),
+        typeof(UnityEngine.SceneManagement.SceneManager),
     };
 
     //附加导出委托类型(在导出委托时, customTypeList 中牵扯的委托类型都会导出， 无需写在这里)
@@ -44,7 +46,9 @@ public static class CustomSettings
 
     //在这里添加你要导出注册到lua的类型列表
     public static BindType[] customTypeList =
-    {                
+    {
+
+        _GT(typeof(UnityEngine.SceneManagement.SceneManager)),
         //------------------------为例子导出--------------------------------
         //_GT(typeof(TestEventListener)),
         //_GT(typeof(TestProtol)),

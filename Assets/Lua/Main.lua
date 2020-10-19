@@ -1,13 +1,20 @@
 --主入口函数。从这里开始lua逻辑
-function Main()					
-	print("logic start")	 		
+require "init"
+
+function OnStart()					
+	print("Lua OnStart")	
+	SceneManager.sceneLoaded = SceneManager.sceneLoaded + OnSceneLoaded 		
 end
 
 --场景切换通知
-function OnLevelWasLoaded(level)
+function OnSceneLoaded(level)
+	print("Lua OnSceneLoaded")	
 	collectgarbage("collect")
 	Time.timeSinceLevelLoad = 0
 end
 
-function OnApplicationQuit()
+
+function OnDestroy()
+	print("Lua OnDestroy")	
+	SceneManager.sceneLoaded = SceneManager.sceneLoaded - OnSceneLoaded 		
 end
