@@ -41,3 +41,54 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: pool
+    uniqueID: 3637332097
+    locked: 0
+  - name: main
+    uniqueID: 360744375
+    locked: 0
+  - name: screen
+    uniqueID: 3777463443
+    locked: 0
+  - name: screenup
+    uniqueID: 2529288971
+    locked: 0
+  - name: window
+    uniqueID: 985781689
+    locked: 0
+  - name: popup1
+    uniqueID: 766158643
+    locked: 0
+  - name: popup2
+    uniqueID: 2954213757
+    locked: 0
+  - name: popup3
+    uniqueID: 3438403321
+    locked: 0
+  - name: popup4
+    uniqueID: 739415799
+    locked: 0
+  - name: popup5
+    uniqueID: 238965909
+    locked: 0
+  - name: guide1
+    uniqueID: 1103723917
+    locked: 0
+  - name: guide2
+    uniqueID: 4293648977
+    locked: 0
+  - name: loading
+    uniqueID: 2804249487
+    locked: 0
+  - name: notify
+    uniqueID: 1131299471
+    locked: 0
+  - name: hints
+    uniqueID: 1647052499
+    locked: 0
+  - name: lock
+    uniqueID: 2647372809
+    locked: 0
+  - name: dark
+    uniqueID: 1131816797
+    locked: 0

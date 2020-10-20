@@ -5,18 +5,49 @@ using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
 
-public class Initialize : MonoBehaviour
+public sealed class App : MonoBehaviour
 {
+
+    public static App Instance
+    {
+        get;
+        protected set;
+    }
+
+    void Awake()
+    {
+        DontDestroyOnLoad(this.gameObject);
+        Instance = this;
+    }
     void Start()
     {
         InitAppSetting();
         this.gameObject.AddComponent<GameManager>();
-
         GameAsset.LoadSceneSingle("Test", () =>
         {
             Debug.Log("GameAsset.LoadSceneSingle");
         });
     }
+
+    //携程
+/*    public static Coroutine Start(IEnumerator func)
+    {
+        return Instance.StartCoroutine(func);
+    }
+  
+    public static void StopAll(IEnumerator func)
+    {
+        Instance.StopAllCoroutines();
+    }
+
+    public static void StopOne(Coroutine task)
+    {
+        Instance.StopCoroutine(task);
+    }*/
+
+
+
+
     //初始化屏幕适配
     void InitAppSetting()
     {

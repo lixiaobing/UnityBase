@@ -7,6 +7,8 @@ using UnityEditor;
 using BindType = ToLuaMenu.BindType;
 using System.Reflection;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
+using UnityEngine.Animations;
 
 public static class CustomSettings
 {
@@ -47,8 +49,28 @@ public static class CustomSettings
     //在这里添加你要导出注册到lua的类型列表
     public static BindType[] customTypeList =
     {
-
+        //--------------------------引擎类-----------------------
         _GT(typeof(UnityEngine.SceneManagement.SceneManager)),
+        _GT(typeof(Canvas)),
+        _GT(typeof(CanvasGroup)),
+        _GT(typeof(RectTransform)),
+        
+        _GT(typeof(RawImage)),
+        _GT(typeof(Image)),
+        _GT(typeof(Button)),
+        _GT(typeof(GraphicRaycaster)),
+        _GT(typeof(Text)),
+
+
+
+        _GT(typeof(LookAtConstraint)),
+        _GT(typeof(Selectable.Transition)),
+        //--------------------------自定义类
+
+        _GT(typeof(LuaComponent)),
+        _GT(typeof(GameAsset)),
+        
+
         //------------------------为例子导出--------------------------------
         //_GT(typeof(TestEventListener)),
         //_GT(typeof(TestProtol)),

@@ -105,10 +105,10 @@ namespace Framework
         }
         protected virtual void StartMain()
         {
-            luaState.DoFile("Main.lua");
-            LuaFunction main = luaState.GetFunction("OnStart");
-            main.Call();
-            main.Dispose();
+            luaState.DoFile("main.lua");
+            LuaFunction onStart = luaState.GetFunction("OnStart");
+            onStart.Call();
+            onStart.Dispose();
 
         }
 
