@@ -32,32 +32,34 @@ namespace Framework
             }
         }
 
+        private NetManager net = null;
+        public NetManager NetMgr
+        {
+            get
+            {
+                return net;
+            }
+        }
+
+
         private void Awake()
         {
             DontDestroyOnLoad(this.gameObject);
             Instance = this;
             res = this.gameObject.AddComponent<ResManager>();
             lua = this.gameObject.AddComponent<LuaManager>();
+            net = this.gameObject.AddComponent<NetManager>();
         }
 
         IEnumerator Start()
         {
-
-            //yield return res.ReadyLuaFiles();
-            yield return StartGame();
+                 yield return StartGame();
         }
 
         IEnumerator StartGame()
         {
             lua.Init();
             yield return null;
-        }
-
-        private void Update()
-        {
-
-
-
         }
     }
 }

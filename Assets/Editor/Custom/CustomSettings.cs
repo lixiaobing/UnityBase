@@ -57,7 +57,9 @@ public static class CustomSettings
         
         _GT(typeof(RawImage)),
         _GT(typeof(Image)),
+ 
         _GT(typeof(Button)),
+        _GT(typeof(Button.ButtonClickedEvent)),
         _GT(typeof(GraphicRaycaster)),
         _GT(typeof(Text)),
 
@@ -69,6 +71,7 @@ public static class CustomSettings
 
         _GT(typeof(LuaComponent)),
         _GT(typeof(GameAsset)),
+        _GT(typeof(App)),
         
 
         //------------------------为例子导出--------------------------------

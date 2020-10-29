@@ -11,7 +11,7 @@ public sealed class App : MonoBehaviour
     public static App Instance
     {
         get;
-        protected set;
+        private set;
     }
 
     void Awake()
@@ -29,7 +29,6 @@ public sealed class App : MonoBehaviour
         });
     }
 
-    //携程
 /*    public static Coroutine Start(IEnumerator func)
     {
         return Instance.StartCoroutine(func);
