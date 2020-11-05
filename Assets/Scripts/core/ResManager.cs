@@ -24,10 +24,6 @@ namespace Framework
 
         private Dictionary<string, AsyncOperationHandle<TextAsset>> luaHandles = new Dictionary<string, AsyncOperationHandle<TextAsset>>();
         public Dictionary<string, TextAsset> luaAssets = new Dictionary<string, TextAsset>();
-        private Dictionary<string, AsyncOperationHandle<TextAsset>> audioHandles = new Dictionary<string, AsyncOperationHandle<TextAsset>>();
-        public Dictionary<string, TextAsset> audioAssets = new Dictionary<string, TextAsset>();
-
-
 
         protected void Awake()
         {
@@ -119,8 +115,19 @@ namespace Framework
         IEnumerator UpdateComplete()
         {
             yield return ReadyLuaFiles();
-            //yield return ReadySettings();
         }
+
+
+
+        public void ClearLua()
+        {
+            foreach (KeyValuePair<string, TextAsset> kv in luaAssets)
+            {
+                Addressables.Release(kv.Value);
+            }
+            luaAssets.Clear();
+        }
+
 
         public IEnumerator ReadyLuaFiles()
         {
@@ -177,97 +184,8 @@ namespace Framework
         }
         */
 
-        public IEnumerator ReadAudioFiles()
-        {
-            //BootScreen.Instance.SetLabel("正在载入音频...");
-            //BootScreen.Instance.SetProgress(0);
+       
 
-
-            string[] files = new string[] { "AkAudio/Windows/Music.bytes" , "AkAudio/Windows/Init.bytes",
-                "AkAudio/Windows/Player.bytes", "AkAudio/Windows/UI.bytes",
-            };
-
-            for (var i = 0; i < files.Length; i++)
-            {
-                string fileKey = files[i];
-                audioHandles[fileKey] = Addressables.LoadAssetAsync<TextAsset>(fileKey);
-            }
-
-            while (audioHandles.Count > 0)
-            {
-                var removeKeys = new List<string>();
-                foreach (KeyValuePair<string, AsyncOperationHandle<TextAsset>> kv in audioHandles)
-                {
-                    if (kv.Value.IsValid() && kv.Value.Status == AsyncOperationStatus.Succeeded)
-                    {
-                        audioAssets.Add(kv.Key, kv.Value.Result);
-                        removeKeys.Add(kv.Key);
-
-                        Debug.Log(kv.Key + " " + kv.Value.Result.bytes.Length);
-                    }
-                }
-                foreach (var key in removeKeys)
-                {
-                    audioHandles.Remove(key);
-                }
-
-                float progress = (float)(files.Length - audioHandles.Count) / (float)files.Length;
-                //BootScreen.Instance.SetProgress(progress);
-
-                yield return new WaitForSeconds(0);
-            }
-
-            //BootScreen.Instance.SetProgress(1);
-
-            yield return new WaitForSeconds(0.5f);
-        }
-
-
-        /* public IEnumerator ReadySettings()
-         {
-             BootScreen.Instance.SetLabel("正在载入设置...");
-             BootScreen.Instance.SetProgress(0);
-
-             string[] keys = new string[] { 
-                 "Setting/BattleCameraSet", "Setting/UILibrarySettings", "Setting/CameraEffectPack", "Setting/BattleViewPowerCurve"
-             };
-             int completeCount = 0;
-             GameAsset.LoadObjects(keys, (sort, obj) => {
-                 completeCount++;
-                 BootScreen.Instance.SetProgress((float)completeCount/(float)keys.Length);
-                 if (sort == 1)
-                 {
-                     battleCameraSet = obj as BattleCameraSet;
-                     CameraParams.Instance.Init();
-                 }
-                 else if(sort == 2){
-                     uiLibraryAsset = obj as UILibraryAsset;
-                 }
-                 else if (sort == 3)
-                 {
-                     cameraEffectPack = obj as CameraEffectPack;
-                 }
-                 else if (sort == 4)
-                 {
-                     battleViewPowerCurve = obj as BattleViewPowerCurve;
-                 }
-
-             });
-             while (completeCount< keys.Length)
-             {
-                 yield return null;
-             }
-             yield return new WaitForSeconds(0.5f);
-         }*/
-
-        public void ClearLua()
-        {
-            foreach (KeyValuePair<string, TextAsset> kv in luaAssets)
-            {
-                Addressables.Release(kv.Value);
-            }
-            luaAssets.Clear();
-        }
 
 
     }

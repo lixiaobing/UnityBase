@@ -143,7 +143,7 @@ function UIManager.onUpdate()
         this.lastWidth = Screen.width
         this.lastHeight = Screen.height
 
-        Log(string.format("Screen Resolution:%s*%s", Screen.width, Screen.height))
+        Debug.Log(string.format("Screen Resolution:%s*%s", Screen.width, Screen.height))
     end
 
     if NOTCH_TOGGLE and isChange then
@@ -599,7 +599,7 @@ function UIManager.closeAllWindow(...)
     end
     this.setCoverLayer()
     -- controllMainState()
-    MsgCenter.sendMessage(Msg.SHOW_TOPBANNER,false) --隐藏topbanner
+    EventCenter.sendMessage(EventType.SHOW_TOPBANNER,false) --隐藏topbanner
 end
 
 function UIManager.hideAllWindow(...)

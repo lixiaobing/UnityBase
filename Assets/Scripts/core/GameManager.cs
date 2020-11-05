@@ -53,7 +53,16 @@ namespace Framework
 
         IEnumerator Start()
         {
-                 yield return StartGame();
+            if (!GameConst.DebugMode) {
+                yield return res.ReadyLuaFiles();
+            }
+            yield return StartGame();
+
+            GameAsset.LoadSceneSingle("Test", () =>
+            {
+                Debug.Log("GameAsset.LoadSceneSingle");
+            });
+
         }
 
         IEnumerator StartGame()

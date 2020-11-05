@@ -23,7 +23,7 @@ function Messager:addListener(msg_name, callback)
         end
         if not include then
             table.insert(self.listeners_[msg_name], callback)
-            MsgCenter.addMessager(msg_name, self)
+            EventCenter.addMessager(msg_name, self)
         end
     end
 end
@@ -33,7 +33,7 @@ function Messager:removeListener(msg_name, callback)
     if self.listeners_[msg_name] then
         if not callback then
             self.listeners_[msg_name] = nil
-            MsgCenter.removeMessager(self, msg_name)
+            EventCenter.removeMessager(self, msg_name)
         else
             for i=#self.listeners_[msg_name],1,-1 do
                 if self.listeners_[msg_name][i] == callback then
@@ -42,14 +42,14 @@ function Messager:removeListener(msg_name, callback)
                 end
             end
             if not next(self.listeners_[msg_name]) then
-                MsgCenter.removeMessager(self, msg_name)
+                EventCenter.removeMessager(self, msg_name)
             end
         end
     end
 end
 
 function Messager:sendMessage(msg_name, data)
-    MsgCenter.sendMessage(msg_name, data)
+    EventCenter.sendMessage(msg_name, data)
 end
 
 function Messager:receiveMessage(msg_name, ...)
@@ -67,7 +67,7 @@ function Messager:receiveMessage(msg_name, ...)
 end
 
 function Messager:dispose()
-    MsgCenter.removeAllMessager(self)
+    EventCenter.removeAllMessager(self)
     self.owner_ = nil
     self.listeners_ = {}
 end

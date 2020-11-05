@@ -1,8 +1,10 @@
 --临时容错
-local Debug = {}
-Debug.Log = print
-Debug.LogError = print
-Debug.LogWarning = print
+if not Debug then
+    Debug =  {}
+    Debug.Log = print
+    Debug.LogError = print
+    Debug.LogWarning = print
+end
 function Log(info)
 	if type(info) == "table" then
 		info = dumpTable(info)

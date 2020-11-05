@@ -112,7 +112,7 @@ function BaseWindow:show()
             -- LogError(self.__cname.." SHOW!!!")
 
             self:addUpdate()
-            MsgCenter.sendMessage(Msg.OPEN_WINDOW_FINISH, self.Config)
+            EventCenter.sendMessage(EventType.OPEN_WINDOW_FINISH, self.Config)
             self:onOpen()
         end
 
@@ -146,7 +146,7 @@ function BaseWindow:close(onComplete)
             if onComplete then
                 onComplete()
             end
-            MsgCenter.sendMessage(Msg.CLOSE_WINDOW_FINISH, self.Config)
+            EventCenter.sendMessage(EventType.CLOSE_WINDOW_FINISH, self.Config)
         end)
 	end
 end

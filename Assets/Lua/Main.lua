@@ -2,6 +2,7 @@
 require "init"
 require "common.init"
 require "ui.init"
+require "messager.init"
 --XXX
 function OnStart()					
 	print("Lua OnStart")	

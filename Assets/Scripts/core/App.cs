@@ -23,10 +23,7 @@ public sealed class App : MonoBehaviour
     {
         InitAppSetting();
         this.gameObject.AddComponent<GameManager>();
-        GameAsset.LoadSceneSingle("Test", () =>
-        {
-            Debug.Log("GameAsset.LoadSceneSingle");
-        });
+
     }
 
 /*    public static Coroutine Start(IEnumerator func)

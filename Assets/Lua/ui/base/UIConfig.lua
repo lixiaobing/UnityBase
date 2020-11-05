@@ -104,7 +104,7 @@ end
 
 local initSetting = function()
 
-    addSetting("MainWindow", MainWindow, "MainWindow", UIConfig.LayerType.Screen, false)
+    addSetting("MainWindow", MainWindow, "UI/Window/MainWindow", UIConfig.LayerType.Screen, false)
    
 end
 

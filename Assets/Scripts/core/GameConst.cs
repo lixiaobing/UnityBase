@@ -15,10 +15,10 @@ namespace Framework
         public const int FrameRate = 60;
 
         //开发期调试模式
-        public static bool DebugMode = true;
+        public static bool DebugMode = false;
 
         //移动平台Lua文件的bytecode模式
-        public const bool LuaByteMode = true;
+        public const bool LuaByteMode = false;
 
 
 

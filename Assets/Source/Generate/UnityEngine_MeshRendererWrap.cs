@@ -12,7 +12,7 @@ public class UnityEngine_MeshRendererWrap
 		L.RegFunction("__tostring", ToLua.op_ToString);
 		L.RegVar("additionalVertexStreams", get_additionalVertexStreams, set_additionalVertexStreams);
 		L.RegVar("subMeshStartIndex", get_subMeshStartIndex, null);
-		L.RegVar("receiveGI", get_receiveGI, set_receiveGI);
+		//L.RegVar("receiveGI", get_receiveGI, set_receiveGI);
 		L.EndClass();
 	}
 
@@ -96,8 +96,8 @@ public class UnityEngine_MeshRendererWrap
 		}
 	}
 
-	[MonoPInvokeCallbackAttribute(typeof(LuaCSFunction))]
-	static int get_receiveGI(IntPtr L)
+	//[MonoPInvokeCallbackAttribute(typeof(LuaCSFunction))]
+/*	static int get_receiveGI(IntPtr L)
 	{
 		object o = null;
 
@@ -105,7 +105,7 @@ public class UnityEngine_MeshRendererWrap
 		{
 			o = ToLua.ToObject(L, 1);
 			UnityEngine.MeshRenderer obj = (UnityEngine.MeshRenderer)o;
-			UnityEngine.ReceiveGI ret = obj.receiveGI;
+            UnityEngine.ReceiveGI ret = obj.receiveGI;
 			ToLua.Push(L, ret);
 			return 1;
 		}
@@ -113,7 +113,7 @@ public class UnityEngine_MeshRendererWrap
 		{
 			return LuaDLL.toluaL_exception(L, e, o, "attempt to index receiveGI on a nil value");
 		}
-	}
+	}*/
 
 	[MonoPInvokeCallbackAttribute(typeof(LuaCSFunction))]
 	static int set_additionalVertexStreams(IntPtr L)
@@ -134,7 +134,7 @@ public class UnityEngine_MeshRendererWrap
 		}
 	}
 
-	[MonoPInvokeCallbackAttribute(typeof(LuaCSFunction))]
+/*	[MonoPInvokeCallbackAttribute(typeof(LuaCSFunction))]
 	static int set_receiveGI(IntPtr L)
 	{
 		object o = null;
@@ -151,6 +151,6 @@ public class UnityEngine_MeshRendererWrap
 		{
 			return LuaDLL.toluaL_exception(L, e, o, "attempt to index receiveGI on a nil value");
 		}
-	}
+	}*/
 }
 
