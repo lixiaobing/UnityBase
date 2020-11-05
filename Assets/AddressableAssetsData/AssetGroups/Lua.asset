@@ -1,0 +1,613 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Lua
+  m_EditorClassIdentifier: 
+  m_GroupName: Lua
+  m_Data:
+    m_SerializedData: []
+  m_GUID: d11766a159bb3e148a58b83f05ac8936
+  m_SerializeEntries:
+  - m_GUID: e0ee81a8f7161244a8813de7a5e4c494
+    m_Address: Lua/cjson/util
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Lua
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: 447c75977bd60ca448af9328d5c20f2a
+    m_Address: Lua/System/coroutine
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Lua
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: aa23cbe5f380db74e955c0e050e5a14e
+    m_Address: Lua/common/functions
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Lua
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: d8ba4f70919cc2b44ac9bb329275d796
+    m_Address: Lua/ui/base/UIUtil
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Lua
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: 7bc1aefc91ffb734da1eb402e0652c2a
+    m_Address: Lua/LuaFilesMap
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Lua
+    m_MainAsset: {fileID: 4900000, guid: 7bc1aefc91ffb734da1eb402e0652c2a, type: 3}
+    m_TargetAsset: {fileID: 4900000, guid: 7bc1aefc91ffb734da1eb402e0652c2a, type: 3}
+  - m_GUID: e9728ce7325d8dc4e893d268aab35073
+    m_Address: Lua/ui/window/MainWindow
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Lua
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: 050d187f72c72344f8c4ee27ec284307
+    m_Address: Lua/common/LuaComponentBase
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Lua
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: 557659c03d983214dbd3f91c940484a0
+    m_Address: Lua/UnityEngine/Quaternion
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Lua
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: 5e97591927a384c4cb210f3d8aab6263
+    m_Address: Lua/jit/bcsave
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Lua
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: 75accf55fa00bc3488588fa6802aeacf
+    m_Address: Lua/ui/init
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Lua
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: 9a11d64ceaeea074b8338a8c2fc2804d
+    m_Address: Lua/protobuf/containers
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Lua
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: 3a021c15d98fa5b439f5bd0bd55becfe
+    m_Address: Lua/UnityEngine/Mathf
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Lua
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: 780c6afc8c71a804590b067c44a36527
+    m_Address: Lua/lpeg/re
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Lua
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: 32ee5bdca4432e0469359b6ad5cfdd40
+    m_Address: Lua/jit/zone
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Lua
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: 1772699ed0622fa45ba1bad0b91c70b0
+    m_Address: Lua/main
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Lua
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: 6827ce3ac00c1154eb10aa5c30d632fb
+    m_Address: Lua/socket/smtp
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Lua
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: 0d65596213f792d4db167a6cff422931
+    m_Address: Lua/tolua
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Lua
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: dcc4e2bce33c6084faa382a6569a290e
+    m_Address: Lua/jit/dis_mips64el
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Lua
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: fef5d97570c0f3b4f98047418bdac6e1
+    m_Address: Lua/ui/base/UIConfig
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Lua
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: a8eda13a6ba0a07408796286ea4ea624
+    m_Address: Lua/mime
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Lua
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: c0bdcae9fd592154aac2f95087c580a1
+    m_Address: Lua/typeof
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Lua
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: 46aeaa505193a0449a7e1af0a9de4214
+    m_Address: Lua/jit/dis_arm
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Lua
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: 58d78688f0754374c981b29ebb44ae02
+    m_Address: Lua/jit/v
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Lua
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: c86a740eb6135de4b86b749e1ea15d01
+    m_Address: Lua/socket/http
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Lua
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: 119654a3543ba6c4e97af7b11fbe48b0
+    m_Address: Lua/jit/dis_x64
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Lua
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: bea2e2a6a92d1a648904e99debeb0ca0
+    m_Address: Lua/System/Reflection/BindingFlags
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Lua
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: f78ba9afa68e78c41b0537f92ef939f9
+    m_Address: Lua/ui/base/BaseWindow
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Lua
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: 068d16a069a75c64bbc78017d2646c16
+    m_Address: Lua/UnityEngine/Vector4
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Lua
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: afa7a9535990cc14f97fc37f8a717667
+    m_Address: Lua/slot
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Lua
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: 850b6d9cfab946f4d96a44ce733df5d6
+    m_Address: Lua/socket/ftp
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Lua
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: c39a2e337a2f0da46adb627ea589ae9b
+    m_Address: Lua/UnityEngine/Vector3
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Lua
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: 5573e4b3638bf8c438a8d2005e23bfa8
+    m_Address: Lua/socket/url
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Lua
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: aa8f98bc224e1c947befa9128fa4e9d2
+    m_Address: Lua/jit/dump
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Lua
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: b70ec6d35ee58df40943f025f2d865ac
+    m_Address: Lua/jit/bc
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Lua
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: 06aa8b5a971c3734eaf70482c42e3fe4
+    m_Address: Lua/protobuf/descriptor
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Lua
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: e1c704b58e101924b966ef32c6bfa780
+    m_Address: Lua/jit/p
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Lua
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: 4e000ff5fd3d8c94b92bfd4c21e2388e
+    m_Address: Lua/UnityEngine/Time
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Lua
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: ec355be84ee030f4b9d9506d94f7ca09
+    m_Address: Lua/System/Injection/LuaInjectionBus
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Lua
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: a1dd4c873d5dd7541beb9379c1b20c06
+    m_Address: Lua/ui/base/BaseComponent
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Lua
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: 9a1d99050890bf2419d45fea567147b3
+    m_Address: Lua/jit/dis_mips64
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Lua
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: c870c9557956a554f8645571c2c130b8
+    m_Address: Lua/list
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Lua
+    m_MainAsset: {fileID: 4900000, guid: c870c9557956a554f8645571c2c130b8, type: 3}
+    m_TargetAsset: {fileID: 4900000, guid: c870c9557956a554f8645571c2c130b8, type: 3}
+  - m_GUID: f36d6d531d284bc46a413eb96d17948e
+    m_Address: Lua/jit/dis_ppc
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Lua
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: 752218a44c8f3134f92a9d4a201f765b
+    m_Address: Lua/messager/EventType
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Lua
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: aaadc2ee273208146a37f3a14e146b82
+    m_Address: Lua/UnityEngine/RaycastHit
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Lua
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: 08b512235e619d54b9862915856c25dc
+    m_Address: Lua/misc/functions
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Lua
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: 9968ab1d3fdc64c488f1a7918a87a6a2
+    m_Address: Lua/ui/base/UIManager
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Lua
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: 8f7e2a5c67720af448d71ec7fec35dd0
+    m_Address: Lua/misc/utf8
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Lua
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: 674868430c1070b4fb8bea4d23a148e6
+    m_Address: Lua/UnityEngine/Bounds
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Lua
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: bdfeefcbad90a2c4694f4acc1f6de140
+    m_Address: Lua/System/Injection/LuaInjectionStation
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Lua
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: c9b433b4886bb2746a85126700122661
+    m_Address: Lua/socket/mbox
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Lua
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: ab9c853a63fbb3145a609a801ec7415a
+    m_Address: Lua/jit/dis_mips
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Lua
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: 9e2ff8709f95cd149834a8fad55f11ac
+    m_Address: Lua/UnityEngine/LayerMask
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Lua
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: 45ea8ec1050d2a94687a0bbf27923ccb
+    m_Address: Lua/System/Injection/InjectionBridgeInfo
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Lua
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: 630bb557fab7ad846b3fe052841728e9
+    m_Address: Lua/protobuf/type_checkers
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Lua
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: 69d5df29a6fcce8408c2d8b17833e1ae
+    m_Address: Lua/protobuf/decoder
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Lua
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: a804c08c189d6b445aeaaca185cf9500
+    m_Address: Lua/ltn12
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Lua
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: f0c5890ac7184474f851aff36e5035fb
+    m_Address: Lua/socket
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Lua
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: 7ccd6b7f1c68a374a940d0171d60fb18
+    m_Address: Lua/protobuf/encoder
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Lua
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: 2b66d7170a8389f4896078d156ea37be
+    m_Address: Lua/misc/strict
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Lua
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: 07eb25a561dc63a45a462925bdf4341b
+    m_Address: Lua/jit/dis_arm64
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Lua
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: 7acc871a3e7453c4cb82da0b632a2485
+    m_Address: Lua/jit/dis_arm64be
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Lua
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: 73c6fb0611dfd774aaacee186fa3d386
+    m_Address: Lua/socket/tp
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Lua
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: 65a403def9cfa9746bce78d6f504ded1
+    m_Address: Lua/protobuf/listener
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Lua
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: 476495b5a46ec0041adebbbe29c11422
+    m_Address: Lua/messager/Messager
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Lua
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: b756468586ff76442b19ae3726c363db
+    m_Address: Lua/System/Timer
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Lua
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: 9d79ff1a68224a742bfee6f898ba3de1
+    m_Address: Lua/common/init
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Lua
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: a8e6523a7eb915c42b0428305f0e828b
+    m_Address: Lua/jit/dis_mipsel
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Lua
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: 984d2cae9903a6d46ac6cd0d875cad7f
+    m_Address: Lua/protobuf/protobuf
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Lua
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: db30f98e406732a48ba80d7fe16a6f00
+    m_Address: Lua/event
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Lua
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: 549fa05b754286a4cb4e983df9f2ceca
+    m_Address: Lua/UnityEngine/Touch
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Lua
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: a164c06d81410f24395416f915614bd0
+    m_Address: Lua/UnityEngine/Profiler
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Lua
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: bd2e4ae2fca7d564ca62144e9da53768
+    m_Address: Lua/protobuf/text_format
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Lua
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: 94d897b9eab6ce44da941aaadcecf5c6
+    m_Address: Lua/messager/EventCenter
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Lua
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: 30f1ee2a090c05440a9f9acfe7b66f46
+    m_Address: Lua/System/ValueType
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Lua
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: 4b8f6f937cd060d4e823f47cf9100bc3
+    m_Address: Lua/UnityEngine/Vector2
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Lua
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: 0d5f432e6303d6e4db1306bda0190ab0
+    m_Address: Lua/jit/dis_x86
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Lua
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: 110f991360d7c434797dc26b74a80a95
+    m_Address: Lua/init
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Lua
+    m_MainAsset: {fileID: 4900000, guid: 110f991360d7c434797dc26b74a80a95, type: 3}
+    m_TargetAsset: {fileID: 4900000, guid: 110f991360d7c434797dc26b74a80a95, type: 3}
+  - m_GUID: 4183093ea99fd2641ab181d6d12babf5
+    m_Address: Lua/UnityEngine/Plane
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Lua
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: 43d29b26f4509004c90230eefe0a2d60
+    m_Address: Lua/common/class
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Lua
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: 0600b2889f0e3c94bafb0dc9efdecb2c
+    m_Address: Lua/UnityEngine/Color
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Lua
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: f8aedfa00dd6ce3408c5bae1e10c3718
+    m_Address: Lua/protobuf/wire_format
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Lua
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: 1e09fb41d711b7d4cb6781ad755496ad
+    m_Address: Lua/socket/headers
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Lua
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: 8191946b61e32f340b93dd6911ff7c84
+    m_Address: Lua/UnityEngine/Ray
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Lua
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: 193371184d317564ebb67aeff0898b74
+    m_Address: Lua/messager/init
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Lua
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 0772e17a2c5f8224ebbd4f337ed7c270, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: c4bc68e56aee5c74182bf8a822d6f2c0, type: 2}
+    - {fileID: 11400000, guid: 1f33700646c012a43bbb2d68e7423684, type: 2}
