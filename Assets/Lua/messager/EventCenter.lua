@@ -1,15 +1,11 @@
--- @brief: UI消息中心
--- @version: 1.0.0
--- @author lanqibo
--- All rights reserved
-MsgCenter = {}
-local this = MsgCenter
+EventCenter = {}
+local this = EventCenter
 
 --消息载体池
 local _Messagers = {}
 
 --添加消息关联
-function MsgCenter.addMessager(msg_name, msgr)
+function EventCenter.addMessager(msg_name, msgr)
 	local msgs = _Messagers[msg_name]
 	if not msgs then
 		_Messagers[msg_name] = {}
@@ -25,7 +21,7 @@ function MsgCenter.addMessager(msg_name, msgr)
 end
 
 --移除组件全部消息关联
-function MsgCenter.removeAllMessager(msgr)
+function EventCenter.removeAllMessager(msgr)
 	if msgr and msgr.listeners_ then
 		for k,v in pairs(msgr.listeners_) do
 			local msgs = _Messagers[k]
@@ -41,7 +37,7 @@ function MsgCenter.removeAllMessager(msgr)
 end
 
 --移除组件指定消息关联
-function MsgCenter.removeMessager(msgr, msg_name)
+function EventCenter.removeMessager(msgr, msg_name)
 
 	local msgs = _Messagers[msg_name]
 
@@ -56,7 +52,7 @@ function MsgCenter.removeMessager(msgr, msg_name)
 end
 
 --发送消息
-function MsgCenter.sendMessage(msg_name, ...)
+function EventCenter.sendMessage(msg_name, ...)
 	if _Messagers[msg_name] then
 		local msgrs = _Messagers[msg_name]
 		local count = #msgrs
