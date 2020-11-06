@@ -34,18 +34,28 @@ public class AssetPostprocess:AssetPostprocessor
             float pregress = (float)index / (float)importedAssets.Length;
             EditorUtility.DisplayProgressBar("Importer Addressables Analysis", assetPath, pregress);
 
-            if (assetPath.EndsWith(".meta") || assetPath.EndsWith(".lua") || assetPath.EndsWith(".cs")) continue;
+
+
+
+
+            if (assetPath.EndsWith(".meta") || assetPath.EndsWith(".cs")) continue;
+
 
             var guid = AssetDatabase.AssetPathToGUID(assetPath);
 
-            /*if (assetPath.StartsWith("Assets/Shaders/") && assetPath.EndsWith(".txt") || (assetPath.EndsWith(".shader") || assetPath.EndsWith(".shadervariants") || assetPath.EndsWith(".cginc")))
+
+
+            if ((assetPath.StartsWith("Assets/Lua") || assetPath.StartsWith("Assets/ToLua/Lua")) && assetPath.EndsWith(".lua"))
             {
-                var group = FindOrCreateGroup(setting, "Shader");
-                var key = assetPath.Replace("Assets/Shaders/", "Shader/");
-                CreateEntry(setting, group, guid, key);
-            }
-            else*/ 
-            if(assetPath.StartsWith("Assets/Scenes/") && assetPath.EndsWith(".unity"))
+
+                var group = FindOrCreateGroup(setting, "Lua");
+
+                var key = assetPath.Replace("Assets/Lua/", "Lua/").
+                    Replace("Assets/ToLua/Lua/", "Lua/").
+                    Replace(".lua", "");
+                    CreateEntry(setting, group, guid, key);  //添加Label 没有实际意义
+
+            }else if (assetPath.StartsWith("Assets/Scenes/") && assetPath.EndsWith(".unity"))
             {
                 var group = FindOrCreateGroup(setting, "Scene");
                 var key = assetPath.Replace("Assets/Scenes/", "").Replace(".unity", "");
@@ -59,9 +69,9 @@ public class AssetPostprocess:AssetPostprocessor
             }
             else if (assetPath.StartsWith("Assets/ResourcesAsset/Lua/") && (assetPath.EndsWith(".txt") || assetPath.EndsWith(".bytes")))
             {
-                var group = FindOrCreateGroup(setting, "Lua");
+                var group = FindOrCreateGroup(setting, "Luac");
                 var key = assetPath.Replace("Assets/ResourcesAsset/Lua/", "Lua/").Replace(".txt", "").Replace(".bytes", "");
-                CreateEntry(setting, group, guid, key, "Lua");
+                CreateEntry(setting, group, guid, key);
             }
             else if (assetPath.StartsWith("Assets/ResourcesAsset/UI/"))
             {

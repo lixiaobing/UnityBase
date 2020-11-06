@@ -102,6 +102,7 @@ namespace Framework
             if (totalDownloadSize > 0)
             {
                 var downloadHandle = Addressables.DownloadDependenciesAsync(keys, Addressables.MergeMode.Union);
+               
                 while (!downloadHandle.IsDone)
                 {
                     float percent = downloadHandle.PercentComplete;
@@ -128,20 +129,41 @@ namespace Framework
             luaAssets.Clear();
         }
 
+/*        public IEnumerator ReadyLuaFiles() {
+
+            var list = new List<object> { "Lua" };
+
+            var handle  = Addressables.LoadAssetsAsync<TextAsset>(list, (tObject) => {
+
+                Debug.Log("xx:" + tObject.name);
+
+            }, Addressables.MergeMode.None);
+
+            handle.Completed += (asset) =>
+            {
+                if (asset.Status == AsyncOperationStatus.Succeeded)
+                {
+
+                    var count = asset.Result.Count;
+                    Debug.Log("count:"+ count);
+                }
+                Debug.Log("Completed:" + asset.Status);
+            };
+
+            yield return handle;
+
+        }*/
+
+
 
         public IEnumerator ReadyLuaFiles()
         {
-/*            BootScreen.Instance.SetLabel("正在载入脚本...");
-            BootScreen.Instance.SetProgress(0);*/
-
             ClearLua();
-
             var handleMap = Addressables.LoadAssetAsync<TextAsset>("Lua/LuaFilesMap");
             yield return handleMap;
 
             TextAsset map = handleMap.Result as TextAsset;
             string[] files = map.text.Split(new string[] { "\r\n" }, StringSplitOptions.RemoveEmptyEntries);
-
             for (var i = 0; i < files.Length; i++)
             {
                 string fileKey = files[i];

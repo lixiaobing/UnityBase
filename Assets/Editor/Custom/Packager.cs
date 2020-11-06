@@ -29,7 +29,8 @@ public class Packager
 
         AddressableAssetSettingsDefaultObject.Settings = AddressableAssetSettings.Create(AddressableAssetSettingsDefaultObject.kDefaultConfigFolder, AddressableAssetSettingsDefaultObject.kDefaultConfigAssetName, true, true);
 
-        string[] folders = { "Assets/ResourcesAsset", "Assets/Scenes" };
+        string[] folders = { "Assets/ResourcesAsset", "Assets/Scenes" , "Assets/Lua", "Assets/ToLua/Lua" };
+        //string[] folders = { "Assets/Lua", "Assets/ToLua/Lua" };
         List<string> paths = new List<string>();
 
         foreach (string folder in folders)
@@ -44,7 +45,7 @@ public class Packager
             }
         }
 
-        AssetPostprocess.PostprocessAssets(paths.ToArray());
+       AssetPostprocess.PostprocessAssets(paths.ToArray());
 
         EditorUtility.SetDirty(AddressableAssetSettingsDefaultObject.Settings);
         AssetDatabase.Refresh();

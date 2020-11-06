@@ -27,9 +27,10 @@ MonoBehaviour:
   m_GroupAssets:
   - {fileID: 11400000, guid: a56625565157ba6449a7b51c5efe7d20, type: 2}
   - {fileID: 11400000, guid: c97af81a780ad694db3e2334deaec157, type: 2}
-  - {fileID: 11400000, guid: 278f9e7699a6baf4c8b86188c0a2b94c, type: 2}
   - {fileID: 11400000, guid: 7feb22804b7a4c646902bc37a5767551, type: 2}
   - {fileID: 11400000, guid: 6d6b958ad62390042929ff1c67c19aa6, type: 2}
+  - {fileID: 11400000, guid: 81bfec7e789433b4e9127c2cbc5b1399, type: 2}
+  - {fileID: 11400000, guid: 278f9e7699a6baf4c8b86188c0a2b94c, type: 2}
   m_BuildSettings:
     m_CompileScriptsInVirtualMode: 0
     m_CleanupStreamingAssetsAfterBuilds: 1
@@ -86,6 +87,7 @@ MonoBehaviour:
     m_LabelNames:
     - default
     - Lua
+    - Luac
   m_SchemaTemplates: []
   m_GroupTemplateObjects:
   - {fileID: 11400000, guid: bdc71015cc04bc64c8ce1b4b6fc24d23, type: 2}
