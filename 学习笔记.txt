@@ -1,0 +1,21 @@
+AddressAbles 教程
+https://www.bilibili.com/video/av85692745/
+https://zhuanlan.zhihu.com/p/102163670
+https://ke.qq.com/course/462944
+https://edu.uwa4d.com/lesson-detail/151/747/0?isPreview=true
+
+
+AddressAbles  API
+https://blog.csdn.net/c332937586/article/details/109483786
+
+Uniyt 优化lua导入
+https://www.cnblogs.com/CodeGize/p/10493278.html
+
+官方教程
+https://docs.unity3d.com/Packages/com.unity.addressables@1.9/manual/AddressableAssetsDevelopmentCycle.html
+
+Content Update Restriction 决定了资源是全量更新还是增量更新。 
+Can Change Post Release后续更新资源的话全量更新(直接替换旧资源)
+
+Jelena Jensen
+
